@@ -28,6 +28,10 @@ int main(void)
     int argsIdx = 0; // args Array Index
     int spaceFound = 0;
     int background;
+    int noCommand = 0;
+
+    // Clear args
+    memset(&args, 0, sizeof(args));
 
     while (should_run)
     {
@@ -37,11 +41,13 @@ int main(void)
         // Read line array from stdin
         fgets(line, MAX_LINE, stdin);
 
-        // TODO Exit
-
         if(line[0] == '!' && line[1] == '!')
         {
-
+            if (args[0] == NULL)
+            {
+                printf("No commands in history.\n");
+                noCommand = 1;
+            }
         }
         else
         {
@@ -75,33 +81,43 @@ int main(void)
             }
             token[idx] = '\0';
         }
-        
 
-        
-
-        // Find whether process to be run in bg
-        background = 0;
-        if (token[idx - 1] == '&')
+        if (noCommand == 1)
         {
-            background = 1;
-            token[idx - 1] = '\0';
-        }        
-
-        pid_t pid;
-        pid = fork();
-
-        if (pid > 0)
+            noCommand = 0;
+        }
+        else if (strcmp(args[0], "exit") == 0)
         {
-            if (background == 0)
-            {
-                wait(NULL);
-            }
-            fflush(stdout);
+            should_run = 0;
         }
         else
         {
-            execvp(args[0], args);
+            // Find whether process to be run in bg
+            background = 0;
+            if (token[idx - 1] == '&')
+            {
+                background = 1;
+                token[idx - 1] = '\0';
+            }        
+
+            pid_t pid;
+            pid = fork();
+
+            if (pid > 0)
+            {
+                if (background == 0)
+                {
+                    wait(NULL);
+                }
+                fflush(stdout);
+            }
+            else
+            {
+                execvp(args[0], args);
+            }
         }
+        
+        
     }
 
     return 0;
