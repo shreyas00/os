@@ -5,7 +5,7 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(64,64) K;
+			TemporalMap(Sz(K),Sz(K)) K;
 			TemporalMap(112,112) Y';
 			TemporalMap(112,112) X';		
 			TemporalMap(Sz(R),Sz(R)) R;
@@ -21,12 +21,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(64,64) K;
+			TemporalMap(32,32) K;
 			TemporalMap(112,112) Y';
 			TemporalMap(112,112) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -37,12 +37,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(128,128) K;
+			TemporalMap(32,32) K;
 			TemporalMap(56,56) Y';
 			TemporalMap(56,56) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -53,12 +53,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(128,128) K;
+			TemporalMap(32,32) K;
 			TemporalMap(56,56) Y';
 			TemporalMap(56,56) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -69,12 +69,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(256,256) K;
+			TemporalMap(32,32) K;
 			TemporalMap(28,28) Y';
 			TemporalMap(28,28) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -85,12 +85,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(256,256) K;
+			TemporalMap(32,32) K;
 			TemporalMap(28,28) Y';
-			TemporalMap(28,28) X';;
+			TemporalMap(28,28) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -101,12 +101,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(256,256) K;
+			TemporalMap(32,32) K;
 			TemporalMap(28,28) Y';
-			TemporalMap(28,28) X';;
+			TemporalMap(28,28) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);;
+			Cluster(32, P);;
 			SpatialMap(1,1) K;
 		}
 	}
@@ -117,12 +117,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(14,14) Y';
 			TemporalMap(14,14) X';;
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);;
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -133,12 +133,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(14,14) Y';
-			TemporalMap(14,14) X';;
+			TemporalMap(14,14) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);;
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -149,12 +149,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(14,14) Y';
-			TemporalMap(14,14) X';;
+			TemporalMap(14,14) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);;
+			Cluster(32, P);;
 			SpatialMap(1,1) K;
 		}
 	}
@@ -165,12 +165,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(7,7) Y';
-			TemporalMap(7,7) X';;
+			TemporalMap(7,7) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);;
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -181,12 +181,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(7,7) Y';
-			TemporalMap(7,7) X';;
+			TemporalMap(7,7) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -197,12 +197,12 @@ Network vgg16 {
 		Dataflow {
 			// Fill your dataflow here
 			SpatialMap(1,1) C;
-			TemporalMap(512,512) K;
+			TemporalMap(32,32) K;
 			TemporalMap(7,7) Y';
 			TemporalMap(7,7) X';
 			TemporalMap(Sz(R),Sz(R)) R;
 			TemporalMap(Sz(S),Sz(S)) S;
-			Cluster(Sz(K), P);
+			Cluster(32, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -212,9 +212,9 @@ Network vgg16 {
 		Dimensions { M 4096, N 1, K 25088 }
 		Dataflow {
 			SpatialMap(1,1) N;
-			TemporalMap(4096,4096) K;
-			TemporalMap(1,1) M;
-			Cluster(4096, P);
+			TemporalMap(1024,1024) K;
+			TemporalMap(4096,4096) M;
+			Cluster(1024, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -224,9 +224,9 @@ Network vgg16 {
 		Dimensions { M 4096, N 1, K 4096 }
 		Dataflow {
 			SpatialMap(1,1) N;
-			TemporalMap(4096,4096) K;
-			TemporalMap(1,1) M;
-			Cluster(4096, P);
+			TemporalMap(1024,1024) K;
+			TemporalMap(4096,4096) M;
+			Cluster(1024, P);
 			SpatialMap(1,1) K;
 		}
 	}
@@ -236,9 +236,9 @@ Network vgg16 {
 		Dimensions { M 4096, N 1, K 4096 }
 		Dataflow {
 			SpatialMap(1,1) N;
-			TemporalMap(4096,4096) K;
-			TemporalMap(1,1) M;
-			Cluster(4096, P);
+			TemporalMap(1024,1024) K;
+			TemporalMap(4096,4096) M;
+			Cluster(1024, P);
 			SpatialMap(1,1) K;
 		}
 	}
